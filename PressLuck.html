@@ -1,0 +1,77 @@
+<!doctype html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./pressLuck.css">
+</head>
+
+<body>
+	<div class="container-fluid" id="mainContainer">
+		<header>
+			<h1 class="royalBlue">Press Our Luck</h1>
+		</header>
+		<section id="finalPayouts">
+			<div class="row">
+				<div class="col">
+					<label for="groupBetAmnt">Initial Bet</label>
+					<input type="number" id="groupBetAmnt" data-bind="value: betAmnt" placeholder="Enter Bet Here" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label for="finalPot">Final Pot</label>
+					<input type="number" id="finalPotAmnt" data-bind="value: finalPot" placeholder="0" />
+				</div>
+			</div>
+		</section>
+		<section id="payouts">
+			<div class="row">
+				<div class="col">
+					<h4 class="royalBlue">Shooter Keeps: <span data-bind="text: calcShooterCut()" class="burntOrange"></span></h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<h4 class="royalBlue">Group Keeps: <span data-bind="text: calcGroupCut()" class="burntOrange"></span></h4>
+				</div>
+			</div>
+		</section>
+		<section id="potPayoutCutoffs">
+			<h3 class="royalBlue">Payout Ranges</h3>
+			<div data-bind="foreach: payouts" id="payoutRangeGrid">
+				<div class="row">
+					<div class="col">
+						Range: <span id="tierOneFinal" data-bind="text: calcFinalPotSpread()" class="burntOrange"></span>
+					</div>
+				</div>
+				<div class="row buffer-row">
+					<div class="col">
+						<div class="col">
+							<em>Shooter:</em> <span id="tierOneShooter" data-bind="text: formattedShooterCutPercent" class="royalBlue"></span>
+						</div>
+					</div>
+					<div class="col">
+						<em>Group:</em> <span id="tierOneGroup" data-bind="text: formattedGroupCutPercent" class="royalBlue"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="whammy">
+			<div class="row">
+				<div class="col" />
+				<div class="col">
+					<img src="./Whammy.png" />
+				</div>
+			</div>
+
+		</section>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.js"></script>
+	<script type="text/javascript" src="./pressLuck.js"></script>
+</body>
