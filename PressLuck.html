@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./pressLuck.css">
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.241.1.min.js"></script>
 </head>
 
 <body>
@@ -29,7 +30,7 @@
 		<section id="payouts">
 			<div class="row">
 				<div class="col">
-					<h4 class="royalBlue">Shooter Keeps: <span data-bind="text: calcShooterCut()" class="burntOrange"></span></h4>
+					<h4 class="royalBlue"><span data-bind="text: user.name"></span> Keeps: <span data-bind="text: calcShooterCut()" class="burntOrange"></span></h4>
 				</div>
 			</div>
 			<div class="row">
@@ -49,11 +50,11 @@
 				<div class="row buffer-row">
 					<div class="col">
 						<div class="col">
-							<em>Shooter:</em> <span id="tierOneShooter" data-bind="text: formattedShooterCutPercent" class="royalBlue"></span>
+							<em data-bind="text: $parent.user.name"></em> <span id="tierOneShooter" data-bind="text: formattedShooterCutPercent" class="royalBlue"></span>
 						</div>
 					</div>
 					<div class="col">
-						<em>Group:</em> <span id="tierOneGroup" data-bind="text: formattedGroupCutPercent" class="royalBlue"></span>
+						<em>Group</em> <span id="tierOneGroup" data-bind="text: formattedGroupCutPercent" class="royalBlue"></span>
 					</div>
 				</div>
 			</div>

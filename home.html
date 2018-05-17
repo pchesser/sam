@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./pubCrawl.css">
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.241.1.min.js"></script>
 </head>
 <body>
 	<header>
@@ -27,7 +28,7 @@
 				</div>
 				<!-- ko foreach: shooters -->
 				<div class="col">
-					<a href="./pressLuck.html" class="burntOrange underline" data-bind="text: $data"></a>
+					<a href="./pressLuck.html" class="burntOrange" data-bind="text: $data"></a>
 				</div>
 				<!-- /ko -->
 			</div>

@@ -1,4 +1,10 @@
-    function Spread(min, max) {
+    function User() {
+		var self = this;
+		var parms = window.location.href.split('?')[1];
+		self.name = parms;
+	}
+	
+	function Spread(min, max) {
     	var self = this;
     	self.min = min;
     	self.max = !!max ? max : Infinity;
@@ -49,6 +55,8 @@
     		"thirdTier": new Spread(1.51, 2.8),
     		"fourthTier": new Spread(2.81)
     	};
+
+		self.user = new User();
 
     	self.payouts = ko.observableArray(
     			[
