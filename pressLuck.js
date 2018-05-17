@@ -1,6 +1,13 @@
 	var lookup = {
 		'Shooter': './whammy.jpg',
-		'Brian': './Brian.jpg'
+		'Brian': './Brian.jpg',
+		'Chris': './Chris.jpg',
+		'Sam': './Sam.jpg',
+		'Justen': './Justen.jpg',
+		'Tom': './Tom.jpg',
+		'Justin': './Justin.jpg',
+		'Matt': './Matt.jpg',
+		'Pat': './Pat.jpg'
 	}
 
 	function User() {
