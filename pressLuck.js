@@ -1,7 +1,8 @@
     function User() {
 		var self = this;
-		var parms = window.location.href.split('?')[1];
-		self.name = parms;
+		var parm = window.location.href.split('?')[1];
+		self.name = parm || 'Shooter';
+		
 	}
 	
 	function Spread(min, max) {
