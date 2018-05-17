@@ -1,8 +1,13 @@
-    function User() {
+	var lookup = {
+		'Shooter': './whammy.jpg',
+		'Brian': './Brian.jpg'
+	}
+
+	function User() {
 		var self = this;
 		var parm = window.location.href.split('?')[1];
 		self.name = parm || 'Shooter';
-		
+		self.img = lookup[self.name];
 	}
 	
 	function Spread(min, max) {

@@ -28,7 +28,7 @@
 				</div>
 				<!-- ko foreach: shooters -->
 				<div class="col">
-					<a href="./pressLuck.html" class="burntOrange" data-bind="text: $data"></a>
+					<a class="burntOrange" data-bind="attr: {href: $data.url}"><span data-bind="text: $data.name"></span></a>
 				</div>
 				<!-- /ko -->
 			</div>
