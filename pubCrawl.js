@@ -6,19 +6,14 @@ function Stop(name, img, drinks, shooters, game) {
 	self.shooters = ko.observableArray(shooters);
 };
 
-function Shooter(name) {
-	var self = this;
-	self.name = name;
-	self.url = './pressLuck.html?' + name;
-}
-
 function HomeViewModel() {
 	var self = this;
 	self.stops = ko.observableArray([
-		new Stop('Venetian', './venetian.jpg', ['negroni', 'chanpagne'], [new Shooter('Sam'), new Shooter('Brian')]),
-		new Stop('Mirage', './mirage.jpg', ['desert sunrise', 'beer'], [new Shooter('Justen'), new Shooter('Pat')]),
-		new Stop('Caesars Palace', './caesarsPalace.jpg', ['duck fart', 'beer'], [new Shooter('Matt'), new Shooter('Tom')]),
-		new Stop('Bellagio', './bellagio.jpg', ['boulivardier', 'beer'], [new Shooter('Justin'), new Shooter('Chris')])
+		new Stop('Venetian', './venetian.jpg', ['negroni', 'chanpagne'], [Globals.Shooters.Sam, Globals.Shooters.Brian]),
+		new Stop('Mirage', './mirage.jpg', ['desert sunrise', 'beer'], [Globals.Shooters.Justen, Globals.Shooters.Pat]),
+		new Stop('Caesars Palace', './caesarsPalace.jpg', ['duck fart', 'beer'], [Globals.Shooters.Matt, Globals.Shooters.Tom]),
+		new Stop('Bellagio', './bellagio.jpg', ['boulivardier', 'beer'], [Globals.Shooters.Justin, Globals.Shooters.Chris])
 	]);
 };
+
 ko.applyBindings(new HomeViewModel());

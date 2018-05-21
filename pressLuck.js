@@ -1,20 +1,21 @@
 	var lookup = {
-		'Shooter': './whammy.jpg',
-		'Brian': './Brian.jpg',
-		'Chris': './Chris.jpg',
-		'Sam': './Sam.jpg',
-		'Justen': './Justen.jpg',
-		'Tom': './Tom.jpg',
-		'Justin': './Justin.jpg',
-		'Matt': './Matt.jpg',
-		'Pat': './Pat.jpg'
+		'Brian': Globals.Shooters.Brian,
+		'Chris': Globals.Shooters.Chris,
+		'Sam': Globals.Shooters.Sam,
+		'Justen': Globals.Shooters.Justen,
+		'Tom': Globals.Shooters.Tom,
+		'Justin': Globals.Shooters.Justin,
+		'Matt': Globals.Shooters.Matt,
+		'Pat': Globals.Shooters.Pat
 	}
 
 	function User() {
 		var self = this;
 		var parm = window.location.href.split('?')[1];
-		self.name = parm || 'Shooter';
-		self.img = lookup[self.name];
+		var match = lookup[parm];
+		self.name = match.name;
+		self.img = match.img;
+		self.message = match.message;
 	}
 	
 	function Spread(min, max) {
