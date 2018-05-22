@@ -17,7 +17,7 @@ Globals.Shooters = function() {
     let brian = new Shooter('Brian', 'Most likely not to want to leave any location. Also most likely to try to cheat us by stealing extra chips. Should be watched closely');
     let justin = new Shooter('Justin', 'Justin was once the Ring-Master of a freakshow. He was also the Gaffer. And the Bearded-Lady. Sam was also supposed to provide a pic for Justin, but did not')
     let chris = new Shooter('Chris', 'Chris is most likely to lead us away from this game and to the strip club. He is also most likely to get us kicked out of that strip club');
-    let pat = new Shooter('Pat', 'An Adonis who has clearly not been touched by Father Time, but may have been touched by someone at day care. That moustache is real');
+    let pat = new Shooter('Pat', 'An Adonis who has clearly not been touched by Father Time, but may have been touched by the man in short-shorts in this photo. That moustache is real');
 
     return {
         Sam: sam,
