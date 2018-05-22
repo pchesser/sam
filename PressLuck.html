@@ -11,31 +11,55 @@
 <body>
 	<div class="container" id="mainContainer">
 		<header>
-			<h1 class="royalBlue">Press Our Luck</h1>
+			<h1 class="royalBlue">Shooter:
+				<span data-bind="text: user.name"></span>
+			</h1>
 		</header>
-		<section id="finalPayouts">
+		<section id="biography">
 			<div class="row">
 				<div class="col">
-					<label for="groupBetAmnt">Initial Bet</label>
-					<input type="number" id="groupBetAmnt" data-bind="value: betAmnt" placeholder="Enter Bet Here" />
+					<div class="col">
+						<img data-bind="attr: {src: user.img}" />
+					</div>
+				</div>
+			</div>
+			<div class="row bio">
+				<div class="col">
+					<div class="col">
+						<b>Bio:</b>
+						<span data-bind="text: user.message" />
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="finalPayouts" class="form-group">
+			<div class="row">
+				<div class="col">
+					<label for="groupBetAmnt" class="form-text">Initial Bet</label>
+					<input class="form-control" type="number" id="groupBetAmnt" data-bind="value: betAmnt" placeholder="Enter Bet Here" />
 				</div>
 			</div>
 			<div class="row">
 				<div class="col">
-					<label for="finalPot">Final Pot</label>
-					<input type="number" id="finalPotAmnt" data-bind="value: finalPot" placeholder="0" />
+					<label for="finalPot" class="form-text">Final Pot</label>
+					<input class="form-control" type="number" id="finalPotAmnt" data-bind="value: finalPot" placeholder="0" />
 				</div>
 			</div>
 		</section>
 		<section id="payouts">
 			<div class="row">
 				<div class="col">
-					<h4 class="royalBlue"><span data-bind="text: user.name"></span> Keeps: <span data-bind="text: calcShooterCut()" class="burntOrange"></span></h4>
+					<h4 class="royalBlue">
+						<span data-bind="text: user.name"></span> Keeps:
+						<span data-bind="text: calcShooterCut()" class="burntOrange"></span>
+					</h4>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col">
-					<h4 class="royalBlue">Group Keeps: <span data-bind="text: calcGroupCut()" class="burntOrange"></span></h4>
+					<h4 class="royalBlue">Group Keeps:
+						<span data-bind="text: calcGroupCut()" class="burntOrange"></span>
+					</h4>
 				</div>
 			</div>
 		</section>
@@ -44,36 +68,24 @@
 			<div data-bind="foreach: payouts" id="payoutRangeGrid">
 				<div class="row">
 					<div class="col">
-						Range: <span id="tierOneFinal" data-bind="text: calcFinalPotSpread()" class="burntOrange"></span>
+						Range:
+						<span id="tierOneFinal" data-bind="text: calcFinalPotSpread()" class="burntOrange"></span>
 					</div>
 				</div>
 				<div class="row buffer-row">
 					<div class="col">
 						<div class="col">
-							<em data-bind="text: $parent.user.name"></em> <span id="tierOneShooter" data-bind="text: formattedShooterCutPercent" class="royalBlue"></span>
+							<em data-bind="text: $parent.user.name"></em>
+							<span id="tierOneShooter" data-bind="text: formattedShooterCutPercent" class="royalBlue"></span>
 						</div>
 					</div>
 					<div class="col">
-						<em>Group</em> <span id="tierOneGroup" data-bind="text: formattedGroupCutPercent" class="royalBlue"></span>
+						<em>Group</em>
+						<span id="tierOneGroup" data-bind="text: formattedGroupCutPercent" class="royalBlue"></span>
 					</div>
 				</div>
 			</div>
-		</section>
-		
-			<div class="row">
-				<div class="col" />
-				<div class="col">
-					<img data-bind="attr: {src: user.img}" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="col" />
-				<div class="col">
-					<span data-bind="text: user.message" />
-				</div>
-			</div>
-		
-
+		</section>		
 	</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
