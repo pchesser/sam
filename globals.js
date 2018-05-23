@@ -15,7 +15,7 @@ Globals.Shooters = function() {
     let justen = new Shooter('Justen', 'Justen is extremely likely to puke. Hopefully he does so at Bellagio, so he can puke in the fountain to minimize cleanup');
     let matt = new Shooter('Matt', 'He works at Netflix or something. Sam was supposed to provide a bio and pic, but failed. So. Yeah. Here\'s a picture of BoJack Horseman');
     let brian = new Shooter('Brian', 'Most likely not to want to leave any location. Also most likely to try to cheat us by stealing extra chips. Should be watched closely');
-    let justin = new Shooter('Justin', 'Justin was once the Ring-Master of a freakshow. He was also the Gaffer. And the Bearded-Lady. Sam was also supposed to provide a pic for Justin, but did not')
+    let justin = new Shooter('Justin', 'Justin was once the Ring-Master of a freakshow. He was also the Gaffer. And the Bearded-Lady. He gave it all up to pursue his dreams of being a carney.')
     let chris = new Shooter('Chris', 'Chris is most likely to lead us away from this game and to the strip club. He is also most likely to get us kicked out of that strip club');
     let pat = new Shooter('Pat', 'An Adonis who has clearly not been touched by Father Time, but may have been touched by the man in short-shorts in this photo. That moustache is real');
 
