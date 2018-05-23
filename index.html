@@ -35,8 +35,10 @@
 				<div class="col">
 				Drinks:
 				</div>
-				<!-- ko foreach: drinks -->
-				<div class="col royalBlue" data-bind="text: $data"></div>
+				<!-- ko foreach: drinkInfos -->
+				<div class="col">
+					<a class="royalBlue" data-bind="attr: {href: $data.url}"><span data-bind="text: $data.name"></span></a>
+				</div>
 				<!-- /ko -->
 			</div>
 		</div>

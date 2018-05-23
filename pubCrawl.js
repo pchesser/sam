@@ -1,18 +1,24 @@
-function Stop(name, img, drinks, shooters, game) {
+function Stop(name, img, drinkInfos, shooters, game) {
 	var self = this;
 	self.name = name;
 	self.img = img;
-	self.drinks = ko.observableArray(drinks);
+	self.drinkInfos = ko.observableArray(drinkInfos);
 	self.shooters = ko.observableArray(shooters);
 };
+
+function DrinkInfo(url, name) {
+	var self = this;
+	self.url = url;
+	self.name = name;
+}
 
 function HomeViewModel() {
 	var self = this;
 	self.stops = ko.observableArray([
-		new Stop('Venetian', './venetian.jpg', ['champagne', 'negroni'], [Globals.Shooters.Sam, Globals.Shooters.Brian]),
-		new Stop('Mirage', './mirage.jpg', ['desert sunrise', 'beer'], [Globals.Shooters.Justen, Globals.Shooters.Pat]),
-		new Stop('Caesars Palace', './caesarsPalace.jpg', ['duck fart', 'beer'], [Globals.Shooters.Matt, Globals.Shooters.Tom]),
-		new Stop('Bellagio', './bellagio.jpg', ['boulivardier', 'beer'], [Globals.Shooters.Justin, Globals.Shooters.Chris])
+		new Stop('Venetian', './venetian.jpg', [new DrinkInfo('./drinkStop.html?Venetian', 'Bellini'), new DrinkInfo('./drinkStop.html?Venetian', 'Whiskey')], [Globals.Shooters.Sam, Globals.Shooters.Brian]),
+		new Stop('Mirage', './mirage.jpg', [new DrinkInfo('./drinkStop.html?Mirage', 'Roy Munson'), new DrinkInfo('./drinkStop.html?Mirage', 'Beer')], [Globals.Shooters.Justen, Globals.Shooters.Pat]),
+		new Stop('Caesars Palace', './caesarsPalace.jpg', [new DrinkInfo('./drinkStop.html?Caesars', 'Caesars Ritz'), new DrinkInfo('./drinkStop.html?Caesars', 'Duck Fart')], [Globals.Shooters.Matt, Globals.Shooters.Tom]),
+		new Stop('Bellagio', './bellagio.jpg', [new DrinkInfo('./drinkStop.html?Bellagio', 'Martini'), new DrinkInfo('./drinkStop.html?Bellagio','Shooter\'s Choice')], [Globals.Shooters.Justin, Globals.Shooters.Chris])
 	]);
 };
 
