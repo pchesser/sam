@@ -36,3 +36,18 @@ img {
 a { 
 	text-decoration: underline;
 }
+
+#drinkMenuLink {
+	margin-top: 15px;
+	margin-bottom: 25px;
+	font-size: 1.3rem;
+}
+
+.drinkPicture {
+	margin-bottom: 25px;	
+}
+
+.drinkDescription {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
