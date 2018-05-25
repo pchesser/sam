@@ -18,7 +18,7 @@ function HomeViewModel() {
 		new Stop('Venetian', './venetian.jpg', [new DrinkInfo('./drinks.html?Venetian', 'Bellini'), new DrinkInfo('./drinks.html?Venetian', 'Whiskey')], [Globals.Shooters.Sam, Globals.Shooters.Brian]),
 		new Stop('Mirage', './mirage.jpg', [new DrinkInfo('./drinks.html?Mirage', 'Roy Munson'), new DrinkInfo('./drinks.html?Mirage', 'Beer')], [Globals.Shooters.Justen, Globals.Shooters.Pat]),
 		new Stop('Caesars Palace', './caesarsPalace.jpg', [new DrinkInfo('./drinks.html?Caesars', 'Caesars Ritz'), new DrinkInfo('./drinks.html?Caesars', 'Duck Fart')], [Globals.Shooters.Matt, Globals.Shooters.Tom]),
-		new Stop('Bellagio', './bellagio.jpg', [new DrinkInfo('./drinks.html?Bellagio', 'Martini'), new DrinkInfo('./drinks.html?Bellagio','Shooter\'s Choice')], [Globals.Shooters.Justin, Globals.Shooters.Chris])
+		new Stop('Bellagio', './bellagio.jpg', [new DrinkInfo('./drinks.html?Bellagio', 'Beer'), new DrinkInfo('./drinks.html?Bellagio','Shooter\'s Choice')], [Globals.Shooters.Justin, Globals.Shooters.Chris])
 	]);
 };
 
