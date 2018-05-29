@@ -5,6 +5,8 @@ function Drink(name, description, picture) {
     self.picture = picture;
 };
 
+
+var water = new Drink('Water', "Optional, but recommended. We're in the desert after all. No, I'M NOT MOTHERING YOU! Fine. Have it your way...", "./Water.jpg");
 var bellini = new Drink('Bellini', "Because they have a damn Bellini Bar. Don't act like you're too good for it", "./Bellini.jpg");
 var whiskey = new Drink('Whiskey Drink', "Time to man up and make up for that Bellini. Can be taken straight, or as part of a mixed drink.", "./Whiskey.jpg");
 var royMunson = new Drink('Roy Munson', "After one of these, we should all look this good.", "./RoyMunson.jpg");
@@ -20,10 +22,10 @@ function DrinkStop(location, menu, drinks) {
     self.drinks = drinks;
 };
 
-var venetian = new DrinkStop('Venetian', 'https://www.venetian.com/restaurants/bellini-bar.html', [bellini, whiskey]);
-var mirage = new DrinkStop('Mirage', ' https://www.mirage.com/en/restaurants/the-still.html#/Location', [royMunson, beer]);
-var caesars = new DrinkStop('Caesars Palace', 'https://www.caesars.com/caesars-palace/things-to-do/lobby-bar#.WwXmTVMvx24', [caesarsRitz, duckFart]);
-var bellagio = new DrinkStop('Bellagio', 'https://www.bellagio.com/en/nightlife/sports-bar-lounge.html', [beer, shootersChoice]);
+var venetian = new DrinkStop('Venetian', 'https://www.venetian.com/restaurants/bellini-bar.html', [bellini, whiskey, water]);
+var mirage = new DrinkStop('Mirage', ' https://www.mirage.com/en/restaurants/the-still.html#/Location', [royMunson, beer, water]);
+var caesars = new DrinkStop('Caesars Palace', 'https://www.caesars.com/caesars-palace/things-to-do/lobby-bar#.WwXmTVMvx24', [caesarsRitz, duckFart, water]);
+var bellagio = new DrinkStop('Bellagio', 'https://www.bellagio.com/en/nightlife/sports-bar-lounge.html', [beer, shootersChoice, water]);
 
 var lookup = {
     "Venetian": venetian,
